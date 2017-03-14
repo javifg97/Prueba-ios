@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var lblHolaMundo:UILabel?
     @IBOutlet var btnHola:UIButton?
-    
+    @IBOutlet var txtfNombre:UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,10 @@ class ViewController: UIViewController {
     
     @IBAction func accionBoton() {
         lblHolaMundo?.text="HOLA MUNDO";
+        if (txtfNombre?.text=="JAVI") {
+            self.performSegue(withIdentifier: "trans1", sender: self)
+        }
+        
     }
 
 
